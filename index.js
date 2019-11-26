@@ -15,7 +15,7 @@ const {
 } = require('./users');
 
 // Cors
-app.use(cors());
+app.use(cors({origin: '*'}));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
