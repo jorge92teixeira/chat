@@ -8,8 +8,9 @@
     "start": "cross-env NODE_ENV=production node index.js",
     "server": "cross-env NODE_ENV=development nodemon index.js",
     "client": "BROWSER=none npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "npm run build --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "heroku-prebuild": "npm install --dev"
   },
   "keywords": [],
   "author": "",
