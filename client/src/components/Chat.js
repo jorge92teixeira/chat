@@ -38,7 +38,6 @@ const Chat = ({ location }) => {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState('');
   const [users, setUsers] = useState('');
-  // const ENDPOINT = 'http://localhost:5000';
   const ENDPOINT = process.env.NODE_ENV === 'development'
     ? 'http://localhost:5000'
     : 'https://jorge92teixeira-io-chat.herokuapp.com/';
@@ -54,7 +53,7 @@ const Chat = ({ location }) => {
     socket.emit('join', { name, room }, (error) => {
       if (error) alert(error);
     });
-  }, [location.search]);
+  }, [ENDPOINT, location.search]);
 
   useEffect(() => {
     socket.on('message', (message) => {
@@ -78,7 +77,6 @@ const Chat = ({ location }) => {
 
   return (
     <ChatContainer>
-      {console.log(ENDPOINT)}
       <UserList
         users={users}
         room={room}
