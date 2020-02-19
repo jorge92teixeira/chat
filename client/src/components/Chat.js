@@ -40,7 +40,7 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const ENDPOINT = process.env.NODE_ENV === 'development'
     ? 'http://localhost:5000'
-    : 'https://jorge92teixeira-io-chat.herokuapp.com/';
+    : 'https://jorgemrt-chat.herokuapp.com/';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
