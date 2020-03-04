@@ -42,7 +42,7 @@ const Chat = ({ location }) => {
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
-    socket = io(ENDPOINT, { path: '/chat-io/socket.io' });
+    socket = io(ENDPOINT, { path: '/chat/socket.io' });
     setName(name);
     setRoom(room);
 

@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 const server = require('http').createServer(app);
-const io = require('socket.io')(server, { path: '/chat-io/socket.io' });
+const io = require('socket.io')(server, { path: '/chat/socket.io' });
 
 const cors = require('cors');
 
@@ -24,7 +24,7 @@ app.use(cors());
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
-  app.use('/chat-io/', express.static(path.join(__dirname, '/client/build')));
+  app.use('/chat/', express.static(path.join(__dirname, '/client/build')));
 }
 
 app.get('/', (req, res) => {

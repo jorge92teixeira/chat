@@ -1,7 +1,7 @@
 {
-  "name": "chat-io",
+  "name": "chat",
   "version": "1.0.0",
-  "description": "chat-io",
+  "description": "chat application using socket.io",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,6 +12,14 @@
     "build": "npm run build --prefix client"
   },
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorge92teixeira/chat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jorge92teixeira/chat/issues"
+  },
+  "homepage": "https://github.com/jorge92teixeira/chat#readme",
   "author": "",
   "license": "ISC",
   "dependencies": {

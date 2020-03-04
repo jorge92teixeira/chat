@@ -1,3 +1,3 @@
 # chat
 
-https://jorgemrt.com/chat-io/
+https://jorgemrt.com/chat/
