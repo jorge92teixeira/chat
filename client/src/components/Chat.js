@@ -38,15 +38,11 @@ const Chat = ({ location }) => {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState('');
   const [users, setUsers] = useState('');
-  // const ENDPOINT = process.env.NODE_ENV === 'development'
-  //   ? 'http://localhost:3002/chat-io'
-  //   : 'https://jorgemrt.com/chat-io';
-
-  const ENDPOINT = '/chat-io';
+  const ENDPOINT = '/';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
-    socket = io(ENDPOINT);
+    socket = io(ENDPOINT, { path: '/chat-io/socket.io' });
     setName(name);
     setRoom(room);
 

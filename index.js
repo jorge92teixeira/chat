@@ -4,9 +4,8 @@ const path = require('path');
 const app = express();
 
 const server = require('http').createServer(app);
-const io = require('socket.io')(server);
+const io = require('socket.io')(server, { path: '/chat-io/socket.io' });
 
-// io.path('/chat-io');
 const cors = require('cors');
 
 server.listen(process.env.PORT || 3002, () => {
@@ -32,7 +31,7 @@ app.get('/', (req, res) => {
   res.status(200).send({ response: 'Server is up and running' });
 });
 
-const chat = io.of('/chat-io').on('connection', (socket) => {
+const chat = io.on('connection', (socket) => {
   socket.on('join', ({ name, room }, callback) => {
     const { error, user } = addUser({ id: socket.id, name, room });
 
