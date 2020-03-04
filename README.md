@@ -1,3 +1,3 @@
 # chat-io
 
-https://jorgemrt-chat.herokuapp.com/
+https://jorgemrt.com/chat-io/
