@@ -38,15 +38,15 @@ const Chat = ({ location }) => {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState('');
   const [users, setUsers] = useState('');
-  const ENDPOINT = process.env.NODE_ENV === 'development'
-    ? 'http://localhost:5000'
-    : 'https://jorgemrt-chat.herokuapp.com/';
+  // const ENDPOINT = process.env.NODE_ENV === 'development'
+  //   ? 'http://localhost:3002/chat-io'
+  //   : 'https://jorgemrt.com/chat-io';
+
+  const ENDPOINT = 'http://localhost:3002/chat-io';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
-
     socket = io(ENDPOINT);
-
     setName(name);
     setRoom(room);
 

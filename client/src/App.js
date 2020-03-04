@@ -7,7 +7,7 @@ import Chat from './components/Chat';
 import './App.css';
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename='/chat-io'>
     <div className="chat__wrapper">
       <Route path='/' exact component={Join} />
       <Route path='/chat' exact component={Chat} />
