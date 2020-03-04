@@ -42,7 +42,7 @@ const Chat = ({ location }) => {
   //   ? 'http://localhost:3002/chat-io'
   //   : 'https://jorgemrt.com/chat-io';
 
-  const ENDPOINT = 'http://localhost:3002/chat-io';
+  const ENDPOINT = '/chat-io';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
