@@ -28,7 +28,7 @@
     "cors": "^2.8.5",
     "cross-env": "^6.0.3",
     "express": "^4.17.1",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.5.0"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
